@@ -52,9 +52,6 @@ public class Project{
     public static void saveStudents(List<Student> listOfStudents) throws FileNotFoundException, ParseException {
 
         String json = new Gson().toJson(listOfStudents);
-//        final JSONObject json = new JSONObject();
-//        json.toJSONString((Map) listOfStudents);
-        
 
         try {
             BufferedWriter br =new BufferedWriter(new FileWriter("C:\\Users\\Steve Karanja\\Documents\\NetBeansProjects\\json-tutorial\\src\\json\\tutorial\\student.json", false));
