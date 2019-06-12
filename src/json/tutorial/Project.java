@@ -64,7 +64,7 @@ public class Project {
                * Buffering characters to provide for the efficient writing of 
                * Single characters, Arrays, and Strings.
             */
-            BufferedWriter br =new BufferedWriter(new FileWriter("students.json", false)); //Writes the json string to a file
+            BufferedWriter br =new BufferedWriter(new FileWriter("student.json", false)); //Writes the json string to a file. Might help to copy the full path to the file.
             br.write(json);
             br.close();
             System.out.println("\nSaved to File Successfully!");
@@ -84,7 +84,7 @@ public class Project {
         listOfStudents = new ArrayList<Student>();      //Initializes the list to store students
 
         //Check whether the file exists and whether it is empty
-        File file = new File("students.json");
+        File file = new File("student.json");
         if (file.length()==0) {
             return listOfStudents;                      //If the file is empty the methods terminates by returning the initialized list of students
         }
@@ -92,7 +92,7 @@ public class Project {
         //If the file is not empty it proceeds to get Student objects from the file and adds them to the list of students
         Reader read = null;
         try {
-            read = new FileReader("students.json");
+            read = new FileReader("student.json");
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
